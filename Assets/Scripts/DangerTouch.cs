@@ -9,6 +9,12 @@ public class DangerTouch : MonoBehaviour {
 		if (collusion.gameObject.tag == "Player")
 			GameManager.gm.lose ();
 
+        ObstacleMovement[] erasers = GameObject.Find("Erasers").GetComponentsInChildren<ObstacleMovement>();
+        foreach(ObstacleMovement eraser in erasers)
+        {
+            eraser.Stop();
+        }
+
 	}
 
 }

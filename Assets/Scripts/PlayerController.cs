@@ -3,17 +3,17 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-	public float speed = 3.0f;
-	public float gravity=9.81f;
+	public float speed   = 3.0f;
+	public float gravity = 9.8f;
 
 	private CharacterController myController;
 
 	// Use this for initialization
 	void Start () {
 		myController = gameObject.GetComponent<CharacterController> ();
-	
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
@@ -22,6 +22,6 @@ public class PlayerController : MonoBehaviour {
 		movement.y -= gravity * Time.deltaTime;
 
 		myController.Move (movement);
-	
+
 	}
 }

@@ -4,7 +4,7 @@ using System.Collections;
 public class ObstacleMovement : MonoBehaviour {
 
 
-	public float speed=5.0f;
+	public float speed = 5.0f;
 	public float minDist = 1f;
 	public Transform target;
 
@@ -17,15 +17,15 @@ public class ObstacleMovement : MonoBehaviour {
 				target = GameObject.FindWithTag ("Player").GetComponent<Transform> ();
 
 		}
-	
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
 		if (target == null)
 			return;
-		
+
 		float distance = Vector3.Distance (transform.position, target.position);
 
 		if (distance > minDist)
@@ -34,5 +34,9 @@ public class ObstacleMovement : MonoBehaviour {
 
 	public void setTarget(Transform newTarget){
 		target = newTarget;
+	}
+
+	public void Stop () {
+        speed = 0;
 	}
 }

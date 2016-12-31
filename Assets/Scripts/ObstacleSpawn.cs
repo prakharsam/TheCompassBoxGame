@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ObstacleSpawn : MonoBehaviour {
 
-	public float secondsBetweenSpawning=4.0f;
+	public float secondsBetweenSpawning = 4.0f;
 	public float xMinRange = 0f;
 	public float xMaxRange = 0f;
 	public float yMinRange = 0f;
@@ -16,12 +16,12 @@ public class ObstacleSpawn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		nextSpawnTime = Time.time + secondsBetweenSpawning;	
+		nextSpawnTime = Time.time + secondsBetweenSpawning;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 		if (GameManager.gm) {
 			if (GameManager.gm.gamestate == GameManager.GameState.Lose)
 				return;
@@ -31,7 +31,7 @@ public class ObstacleSpawn : MonoBehaviour {
 			Spawn ();
 			nextSpawnTime = Time.time + secondsBetweenSpawning;
 		}
-	
+
 	}
 
 	void Spawn(){
