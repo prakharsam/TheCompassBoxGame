@@ -1,18 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//this script manages the game of a particular scene
+
 public class GameManager : MonoBehaviour {
 
 	public static GameManager gm;
 	public GameObject player;
 	public enum GameState
 	{
-		Start,
 		Playing,
+		Menu,
 		Lose
 	};
 
-	public GameState gamestate = GameState.Playing;
+	public GameState gamestate = GameState.Playing;		//gamestate is set to playing by default
 	public GameObject gameOverCanvas;
 
 
@@ -36,17 +38,18 @@ public class GameManager : MonoBehaviour {
 		case GameState.Playing:
 			break;
 
+		
 		case GameState.Lose:
-			
-			player.transform.DetachChildren();
-			player.SetActive (false);
-			gameOverCanvas.SetActive (true);
+			player.transform.DetachChildren();     //all the gameobjects attached with the player gets detached like camera
+			player.SetActive (false);				//player is deactivated
+			gameOverCanvas.SetActive (true);		//the gameover canvas is activated
 			break;
 			
 		}
 	
 	}
 
+	//if the player dies, the gamestate is set to Lose wiht this function
 	public void lose(){
 		gm.gamestate = GameState.Lose;
 	}

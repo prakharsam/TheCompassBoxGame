@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;	//SceneManager is a class in SceneManagement required to manage scenes at runtime
 
 //This script is to be attached to the text of the button
 public class ChangeLevelButton : MonoBehaviour {
@@ -11,6 +11,6 @@ public class ChangeLevelButton : MonoBehaviour {
 	//function to load the scene 
 	public void loadLevel(){
 
-		SceneManager.LoadScene (levelToLoad);
+		SceneManager.LoadScene (levelToLoad);	//this function Loads the scene by its name 
 	}
 }
