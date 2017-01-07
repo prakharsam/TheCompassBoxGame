@@ -2,53 +2,54 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
+	
+	public float speed = 10.0f;					//speed of player
+	public float jumpForce = 250.0f;			//force applied to the player when jump is initiated
 
-	public float speed   = 3.0f;	//speed of player
-	public float gravity = 9.8f;	//gravity to affect the player to fall
-	public float jumpHeight = 17.0f; //how high the player
+	private Rigidbody rb; 						//a component in unity which enables us to use physics property to the player
 
-	private bool jump = false;		//jump is set to false by default
+	private bool jump = false;
+	private bool isGrounded = true;
 
-	/*CharacterController is a class in unity engine that makes the user easily move.
-	  you have to add component to the gameobject to use this.*/
-	private CharacterController myController;	
-
-	// Use this for initialization
-	void Start () {
-		
-		//getting the value of Character controller component
-		myController = gameObject.GetComponent<CharacterController> ();
+	private void Start(){
+		rb = GetComponent<Rigidbody> ();	//getting the rigidbody component from the player
 
 	}
 
-	// Update is called once per frame
-	void Update () {
-
-		//storing (x,y,z) coordinates when inputs are given
-		Vector3 movement = Input.GetAxis ("Horizontal") * Vector3.right * speed * Time.deltaTime;
-
-		//when jump key is pressed
-		if (Input.GetButtonDown ("Jump")) {
-			jump = true;
-		}
-
-		if (jump == false) {
-			//affect of gravity to the player
-			movement.y -= gravity * Time.deltaTime;
-		}
-
-		if (jump == true) {
-			movement.y += jumpHeight * Time.deltaTime;	//the y axis of the player is increased
-			jumpHeight--;								//and the jump height is gradually decreased
-			if (jumpHeight == 0) {						//when the jump height is 0,the player is in the ground and jump is set false
-				jump = false;
-				jumpHeight = 17.0f;						//jump is set to it's previous value for the next
+	//called every framerate
+	private void Update(){
+		//when jump button is presesd, checked if it's in midair and grounded
+		if (Input.GetButtonDown ("Jump") ) {
+			if (!jump && isGrounded) {
+				jump = true;
 			}
 		}
 
-		//this is to move the player using the coordinates movement
-		myController.Move (movement);
-
 	}
+
+	//function is called every fixed framerate. Used when we deal with rigidbody.
+	private void FixedUpdate(){
+
+		Vector3 movement = new Vector3();			//(x,y,z) coordinates for the player movement		
+		movement.x = Input.GetAxis ("Horizontal");		//when left/right button is pressed, it gives value to the x value
+		rb.AddForce (movement * speed);				//adds force to the player with speed to move
+
+		//for jumping
+		if (jump) {									
+			movement.y = jumpForce;				//jumpForce value is added to the y axis				
+			rb.AddForce (movement);				
+			isGrounded = false;
+			jump = false;
+		}
+	}
+
+	//functon called as soon as the player collide with the floor 
+	void OnCollisionEnter(Collision collision){
+		if (collision.gameObject.tag == "Floor") {
+			isGrounded = true;
+		}
+	}
+
+
 
 }

@@ -30,12 +30,7 @@ public class ObstacleMovement : MonoBehaviour {
 		//if there is no gameobject with tag "Player" nothing happens 
 		if (target == null)
 			return;
-
-		//distance between the enemy and the target
-		float distance = Vector3.Distance (transform.position, target.position);
-
-		//if distance is greater than the minimum distance(set to 0), the enemy moves forward
-		if (distance > 0)
+		
 			transform.position -= transform.forward * speed * Time.deltaTime;
 	}
 
