@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 	
-	public float speed = 10.0f;					//speed of player
+	public float speed = 20.0f;					//speed of player
 	public float jumpForce = 250.0f;			//force applied to the player when jump is initiated
 
 	private Rigidbody rb; 						//a component in unity which enables us to use physics property to the player
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour {
 
 	//function is called every fixed framerate. Used when we deal with rigidbody.
 	private void FixedUpdate(){
-
+		
 		Vector3 movement = new Vector3();			//(x,y,z) coordinates for the player movement		
 		movement.x = Input.GetAxis ("Horizontal");		//when left/right button is pressed, it gives value to the x value
 		rb.AddForce (movement * speed);				//adds force to the player with speed to move

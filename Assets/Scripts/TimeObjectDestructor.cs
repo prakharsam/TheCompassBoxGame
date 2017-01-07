@@ -5,13 +5,13 @@ using System.Collections;
 
 public class TimeObjectDestructor : MonoBehaviour {
 
-	public float timeOut = 20.0f; //period of time alive in the game
+	public float timeOut = 80.0f/ObstacleMovement.speed ; //period of time alive in the game.
+	//70 is the floor length. so it gets destroyed after covering 80 distance 
 
 	// Use this for initialization
 	void Start () {
 		Invoke ("DestroyNow", timeOut);	//invoking funtion DestroyNow after timeOut seconds
 	}
-	
 
 	void DestroyNow(){
 

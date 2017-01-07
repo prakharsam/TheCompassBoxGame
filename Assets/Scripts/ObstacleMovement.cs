@@ -7,7 +7,7 @@ using System.Collections;
 public class ObstacleMovement : MonoBehaviour {
 
 
-	public float speed = 5.0f;	//speed of enemy
+	public static float speed = 5.0f;	//speed of enemy
 
 	public Transform target;	//position of target(player)
 
@@ -31,7 +31,7 @@ public class ObstacleMovement : MonoBehaviour {
 		if (target == null)
 			return;
 		
-			transform.position -= transform.forward * speed * Time.deltaTime;
+		transform.position -= transform.forward * speed * Time.deltaTime;
 	}
 
 	//function to set a new target
@@ -43,4 +43,5 @@ public class ObstacleMovement : MonoBehaviour {
 	public void Stop () {
         speed = 0;
 	}
+
 }
