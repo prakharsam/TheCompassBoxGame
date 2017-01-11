@@ -6,6 +6,7 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 
 	public static GameManager gm;
+
 	public GameObject player;
 	public enum GameState
 	{
@@ -14,12 +15,15 @@ public class GameManager : MonoBehaviour {
 		Lose
 	};
 
+	public float obstacleSpeed = 5.0f;
+
 	public GameState gamestate = GameState.Playing;		//gamestate is set to playing by default
 	public GameObject gameOverCanvas;
 
 
 	// Use this for initialization
 	void Start () {
+		
 		if (gm == null)
 			gm = gameObject.GetComponent<GameManager> ();
 		
@@ -53,4 +57,5 @@ public class GameManager : MonoBehaviour {
 	public void lose(){
 		gm.gamestate = GameState.Lose;
 	}
+
 }

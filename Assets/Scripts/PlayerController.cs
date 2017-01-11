@@ -30,14 +30,14 @@ public class PlayerController : MonoBehaviour {
 	//function is called every fixed framerate. Used when we deal with rigidbody.
 	private void FixedUpdate(){
 		
-		Vector3 movement = new Vector3();			//(x,y,z) coordinates for the player movement		
-		movement.x = Input.GetAxis ("Horizontal");		//when left/right button is pressed, it gives value to the x value
-		rb.AddForce (movement * speed);				//adds force to the player with speed to move
+		Vector3 force = new Vector3();			//(x,y,z) coordinates for the player movement		
+		force.x = Input.GetAxis ("Horizontal");		//when left/right button is pressed, it gives value to the x value
+		rb.AddForce (force * speed);				//adds force to the player with speed to move
 
 		//for jumping
 		if (jump) {									
-			movement.y = jumpForce;				//jumpForce value is added to the y axis				
-			rb.AddForce (movement);				
+			force.y = jumpForce;				//jumpForce value is added to the y axis				
+			rb.AddForce (force);				
 			isGrounded = false;
 			jump = false;
 		}

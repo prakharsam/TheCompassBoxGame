@@ -7,7 +7,7 @@ using System.Collections;
 public class ObstacleMovement : MonoBehaviour {
 
 
-	public static float speed = 5.0f;	//speed of enemy
+	private float speed = GameManager.gm.obstacleSpeed;	//speed of enemy
 
 	public Transform target;	//position of target(player)
 
@@ -33,6 +33,8 @@ public class ObstacleMovement : MonoBehaviour {
 		
 		transform.position -= transform.forward * speed * Time.deltaTime;
 	}
+
+
 
 	//function to set a new target
 	public void setTarget(Transform newTarget){
