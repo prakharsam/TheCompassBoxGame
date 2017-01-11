@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 	
-	public float speed = 20.0f;					//speed of player
+	public float speed = 15.0f;					//speed of player
 	public float jumpForce = 250.0f;			//force applied to the player when jump is initiated
 
 	private Rigidbody rb; 						//a component in unity which enables us to use physics property to the player

@@ -6,8 +6,8 @@ using System.Collections;
 public class TimeObjectDestructor : MonoBehaviour {
 
 
-	private float timeOut = 80.0f/GameManager.gm.obstacleSpeed ; //period of time alive in the game.
-	//70 is the floor length. so it gets destroyed after covering 80 distance 
+	private float timeOut = 110.0f/GameManager.gm.obstacleSpeed ; //period of time alive in the game.
+	//100 is the floor length. so it gets destroyed after covering 80 distance 
 
 	// Use this for initialization
 	void Start () {

@@ -415,7 +415,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 730388961}
-  - component: {fileID: 730388962}
   m_Layer: 0
   m_Name: Erasers
   m_TagString: Untagged
@@ -436,21 +435,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &730388962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 730388960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91bfa4545078e374aa6103e19fd715f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  secondsBetweenSpawning: 2
-  objectsToSpawn:
-  - {fileID: 1000010330817784, guid: edbd0adc0bca5e947bbefd98febdd4b6, type: 2}
-  - {fileID: 1000010330817784, guid: 21d48e98b5f6ae743b9858c1bd881db2, type: 2}
 --- !u!1 &816726461
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +529,49 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &870095093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 870095095}
+  - component: {fileID: 870095094}
+  m_Layer: 0
+  m_Name: Collects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &870095094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 870095093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91bfa4545078e374aa6103e19fd715f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsBetweenSpawning: 1
+  objectsToSpawn:
+  - {fileID: 1496377392688200, guid: 1956404f9844c1d47b16fb6b191399ed, type: 2}
+--- !u!4 &870095095
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 870095093}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1156506418
 Prefab:
   m_ObjectHideFlags: 0
@@ -588,6 +615,14 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
+    - target: {fileID: 4000011478572944, guid: 2ee9aa811920abf49add7bcb57064f72, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011478572944, guid: 2ee9aa811920abf49add7bcb57064f72, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ee9aa811920abf49add7bcb57064f72, type: 2}
   m_IsPrefabParent: 0
@@ -620,15 +655,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011980167112, guid: 64e6a77428a890b47b2dbabfb0365b31, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.34
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000011980167112, guid: 64e6a77428a890b47b2dbabfb0365b31, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.06
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000011980167112, guid: 64e6a77428a890b47b2dbabfb0365b31, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -33.41
+      value: -47.3
       objectReference: {fileID: 0}
     - target: {fileID: 4000011980167112, guid: 64e6a77428a890b47b2dbabfb0365b31, type: 2}
       propertyPath: m_LocalRotation.x
@@ -683,7 +718,7 @@ Prefab:
     - target: {fileID: 114000010163565442, guid: 64e6a77428a890b47b2dbabfb0365b31,
         type: 2}
       propertyPath: speed
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4000011980167112, guid: 64e6a77428a890b47b2dbabfb0365b31, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
