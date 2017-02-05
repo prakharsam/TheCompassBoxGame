@@ -22,10 +22,8 @@ GameObject:
   - component: {fileID: 33265118293011190}
   - component: {fileID: 23722660196367630}
   - component: {fileID: 64897047939845804}
-  - component: {fileID: 95383972375441098}
-  - component: {fileID: 54565846168341512}
-  - component: {fileID: 136189199908190906}
   - component: {fileID: 114912588695435616}
+  - component: {fileID: 143998077953291034}
   m_Layer: 0
   m_Name: Pencil
   m_TagString: Player
@@ -72,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1487833882160590}
   m_LocalRotation: {x: 0.24575657, y: -0.24732989, z: -0.93606836, w: 0.046986546}
-  m_LocalPosition: {x: 0, y: 2.1, z: -47}
+  m_LocalPosition: {x: 0, y: 1.91, z: -47}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 4026291501138684}
@@ -153,21 +151,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1487833882160590}
   m_Mesh: {fileID: 4300000, guid: d22916a0613e58448b0f69a70837ec94, type: 3}
---- !u!54 &54565846168341512
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1487833882160590}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!64 &64897047939845804
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -175,10 +158,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1487833882160590}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d22916a0613e58448b0f69a70837ec94, type: 3}
@@ -196,23 +179,6 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1849965186856288}
   m_Enabled: 1
---- !u!95 &95383972375441098
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1487833882160590}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: d22916a0613e58448b0f69a70837ec94, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114912588695435616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,8 +190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11164d93de7e1e6429ad0cf96897b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  jumpForce: 250
+  speed: 5
+  jumpSpeed: 5
 --- !u!124 &124151434105033018
 Behaviour:
   m_ObjectHideFlags: 1
@@ -233,8 +199,8 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1849965186856288}
   m_Enabled: 1
---- !u!136 &136189199908190906
-CapsuleCollider:
+--- !u!143 &143998077953291034
+CharacterController:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -242,7 +208,11 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.0020575547
-  m_Height: 0.040074967
-  m_Direction: 1
-  m_Center: {x: 0.00023197837, y: -0.0026835948, z: -0.00043462525}
+  serializedVersion: 2
+  m_Height: 0.034707777
+  m_Radius: 0.0021497356
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
