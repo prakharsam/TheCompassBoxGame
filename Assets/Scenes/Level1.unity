@@ -481,9 +481,20 @@ Prefab:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 64897047939845804, guid: 64e6a77428a890b47b2dbabfb0365b31,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64897047939845804, guid: 64e6a77428a890b47b2dbabfb0365b31,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 54565846168341512, guid: 64e6a77428a890b47b2dbabfb0365b31, type: 2}
     - {fileID: 95383972375441098, guid: 64e6a77428a890b47b2dbabfb0365b31, type: 2}
+    - {fileID: 136189199908190906, guid: 64e6a77428a890b47b2dbabfb0365b31, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 64e6a77428a890b47b2dbabfb0365b31, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &730388960

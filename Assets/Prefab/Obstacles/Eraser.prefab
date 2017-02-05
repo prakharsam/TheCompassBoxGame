@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 114965857245020184}
   - component: {fileID: 114548182906903466}
   - component: {fileID: 114331364487422588}
-  - component: {fileID: 65926670582953446}
   m_Layer: 0
   m_Name: Eraser
   m_TagString: Untagged
@@ -91,25 +90,13 @@ MeshCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1310541581532330}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: a6130c386de99f049b9f79760295fc57, type: 3}
---- !u!65 &65926670582953446
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1310541581532330}
-  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0063957428, y: 0.0128448615, z: 0.008998221}
-  m_Center: {x: 0.000010190536, y: -0.0005552294, z: -0.0005890599}
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: a6130c386de99f049b9f79760295fc57, type: 3}
 --- !u!114 &114331364487422588
 MonoBehaviour:
   m_ObjectHideFlags: 1
