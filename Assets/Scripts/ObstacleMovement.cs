@@ -28,22 +28,13 @@ public class ObstacleMovement : MonoBehaviour {
 	void Update () {
 
 		//if there is no gameobject with tag "Player" nothing happens 
-		if (target == null)
-			return;
+		if (target != null) {
+			
+			transform.position -= transform.forward * speed * Time.deltaTime;
+		}
 		
-		transform.position -= transform.forward * speed * Time.deltaTime;
+
 	}
 
-
-
-	//function to set a new target
-	public void setTarget(Transform newTarget){
-		target = newTarget;
-	}
-
-	//function to stop the enemy
-	public void Stop () {
-        speed = 0;
-	}
 
 }

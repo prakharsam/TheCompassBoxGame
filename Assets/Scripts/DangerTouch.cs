@@ -13,7 +13,7 @@ public class DangerTouch : MonoBehaviour {
 		ObstacleMovement[] erasers = GameObject.Find("Erasers").GetComponentsInChildren<ObstacleMovement>();
         foreach(ObstacleMovement eraser in erasers)
         {
-            eraser.Stop();
+          //  eraser.Stop();
         }
 
 	}
