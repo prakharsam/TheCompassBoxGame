@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour {
 
 	public GameState gamestate = GameState.Playing;		//gamestate is set to playing by default
 	public GameObject gameOverCanvas;
+	public Material floor;
+	public float floorSpeed = 2.0f;
 
 
 	// Use this for initialization
@@ -40,6 +42,7 @@ public class GameManager : MonoBehaviour {
 
 
 		case GameState.Playing:
+			floor.SetTextureOffset ("_MainTex", new Vector2 (0, -Time.time * floorSpeed));
 			break;
 
 		

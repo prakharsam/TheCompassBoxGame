@@ -1,12 +1,16 @@
 fileFormatVersion: 2
-guid: c06375f8eaa02eb4c992b51c6aa0d42e
-timeCreated: 1486294158
+guid: f5e4f94718a5f01448eff99cdd35cf38
+timeCreated: 1486394260
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: polySurface19
+    6400000: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -34,7 +38,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -49,7 +53,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
   importAnimation: 1
   copyAvatar: 0

@@ -1,12 +1,16 @@
 fileFormatVersion: 2
-guid: 8c59e24def87dc242952da96ce019db9
-timeCreated: 1486294163
+guid: c26215b1a4b452d45af04ba7917f7ee4
+timeCreated: 1486394890
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pCube30
+    6400000: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -34,7 +38,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

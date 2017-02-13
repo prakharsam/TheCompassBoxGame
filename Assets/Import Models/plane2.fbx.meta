@@ -1,12 +1,13 @@
 fileFormatVersion: 2
-guid: 679c4908fcd01c04583ff532487c91c0
-timeCreated: 1486294124
+guid: 4bb920b36a2bd5a4a95b2c92ebed518e
+timeCreated: 1486394820
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -69,7 +70,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
