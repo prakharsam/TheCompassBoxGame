@@ -10,9 +10,9 @@ public class ObstacleSpawn : Spawning {
 
 
 		spawnPosition.x = Random.Range (-4, 4);
-		spawnPosition.y = 0.25f + objectToSpawn[objectIndex].GetComponent<Renderer>().bounds.size.y / 2; //height(Land) / 2 + height(Eraser) / 2
+		spawnPosition.y = 0.25f + objectToSpawn[objectIndex].GetComponentInChildren<Renderer>().bounds.size.y / 2; //height(Land) / 2 + height(Eraser) / 2
 		spawnPosition.z = 50f;  //Land length / 2
-		Quaternion rotation = objectToSpawn[objectIndex].GetComponent<Transform>().rotation;
+		Quaternion rotation = objectToSpawn[objectIndex].GetComponentInChildren<Transform>().rotation;
 		GameObject spawnedObject = Instantiate (objectToSpawn [objectIndex], spawnPosition, rotation) as GameObject;
 		spawnedObject.transform.parent = gameObject.transform;
 					

@@ -513,11 +513,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsBetweenSpawning: 0.5
   objectToSpawn:
-  - {fileID: 1310541581532330, guid: 00b34f5812899a94ba6849d8c52867a1, type: 2}
-  - {fileID: 1180201392820798, guid: c4569d8105766c34fa06663a870100fa, type: 2}
-  - {fileID: 1327491730003384, guid: 7b770eb4858c378448e734df064a27c8, type: 2}
-  - {fileID: 1972554390659284, guid: d5f51094eb85b17498be6110fe4182c3, type: 2}
-  - {fileID: 1530662571039136, guid: a1ba495aee4fc1e4890bfad3047acbbd, type: 2}
+  - {fileID: 1989512086845990, guid: 632387564f94c36459cc42115411a623, type: 2}
+  - {fileID: 1322862664175970, guid: d8f85e8cabcb51f43a65ba97f1f814f1, type: 2}
+  - {fileID: 1337017578630512, guid: dcdd3d35457503b4d891019c0c82c34c, type: 2}
+  - {fileID: 1367675599905534, guid: 0b2ee33b7f92793439ef6c9bbb4ad4e1, type: 2}
+  - {fileID: 1834705238262920, guid: 4ad3ae2edb41347438660493a7edea67, type: 2}
   nextSpawnTime: 0
   spawnPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &737875866
